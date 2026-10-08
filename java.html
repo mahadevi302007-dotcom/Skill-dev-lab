@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        //Arrow function
+        const square=n=>n*n;
+
+        //destructing
+        const student={ name: "Ravi", dept: "CSE", year: 2 };
+        const { name, dept } = student;
+
+        //template literals
+        const message= student: ${name}, Department: ${dept};
+
+        //spread operator
+        const arr1=[1,2,3];
+        const arr2=[...arr1,4,5];
+
+        document.getElementById("output").innerHTML =`
+        <p>square of 5:${square(5)}</p>
+        <p>${message}</p>
+        <p>Combined array:${arr2.join(",")}</p>
+        `;
+    </script>
+</body>
+</html>
